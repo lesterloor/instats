@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Search Someones public stats
+  form(method="post" action="/users")
+    input(name="userInput" placeholder="Search Another user" value="ifunnymeme.tv")
+    input(type="submit")
