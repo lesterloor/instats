@@ -4,4 +4,9 @@ block content
   img(class="profilePicture" src=data.profile_picture)
   h1 #{data.username}
   p User ID: #{data.id}
+  - for (var i = media.length - 1; i >= 0; --i) {
+    img(class="profileMedia" src=media[i].images.thumbnail.url)
+    p #{media[i].caption.text}
+    p #{media[i].type} has been liked: #{media[i].likes.count} times
+  -} 
   
